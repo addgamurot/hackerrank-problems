@@ -1,0 +1,16 @@
+n = input().split()
+num_of_students = int(n[0])
+num_of_subjects = int(n[1])
+average_score = 0
+new_n_list = list()
+
+for a in range(num_of_subjects):
+    new_n = input().split()
+    new_n_list.append(list(map(float,new_n)))
+
+new_n_list_zipped = list(zip(*new_n_list))
+
+    
+for i in range(num_of_students):
+    average_score  = sum(new_n_list_zipped[i])/num_of_subjects
+    print(average_score)
