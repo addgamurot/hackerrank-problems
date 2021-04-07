@@ -1,0 +1,7 @@
+n = raw_input().split()
+
+x = int(n[0])
+k = int(n[1])
+
+n1 = eval(raw_input())
+print(n1 == k)
