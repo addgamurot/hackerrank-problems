@@ -1,0 +1,33 @@
+def sort_string(s, n):
+    lowercase_s = ''
+    uppercase_s = ''
+    odd_digits_s = ''
+    even_digits_s = ''
+    
+    for i in range(n):
+        
+        if (s[i] >= 'a' and s[i] <= 'z'):
+            lowercase_s = lowercase_s + s[i]
+            
+        if (s[i] >= 'A' and s[i] <= 'Z'):
+            uppercase_s = uppercase_s + s[i]
+            
+        if (int(s[i].isdigit())):
+            
+            if int(s[i]) % 2 == 0:
+                even_digits_s = even_digits_s + s[i]
+                
+            elif int(s[i]) % 2 > 0:
+                odd_digits_s = odd_digits_s + s[i]
+                
+                
+            
+    lowercase_s_sorted = ''.join(sorted(lowercase_s))
+    uppercase_s_sorted = ''.join(sorted(uppercase_s))
+    digits_s_sorted = ''.join(sorted(odd_digits_s)) + ''.join(sorted(even_digits_s))
+    
+    sorted_string = lowercase_s_sorted + uppercase_s_sorted + digits_s_sorted
+    return print(sorted_string)
+
+n = input()
+sort_string(n, len(n))
