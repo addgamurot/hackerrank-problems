@@ -1,4 +1,5 @@
-def sort_string(s, n):
+def sort_string(s):
+    n = len(s)
     lowercase_s = ''
     uppercase_s = ''
     odd_digits_s = ''
@@ -30,4 +31,4 @@ def sort_string(s, n):
     return print(sorted_string)
 
 n = input()
-sort_string(n, len(n))
+sort_string(n)
