@@ -1,0 +1,5 @@
+n = int(input())
+m = input().split()
+boolean_int = all(list(num > '0' for num in m))
+boolean_pal = any(list(num == num[::-1] for num in m))
+print(boolean_int and boolean_pal)
