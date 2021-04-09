@@ -1,0 +1,41 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the sockMerchant function below.
+def sockMerchant(n, ar):
+                      
+                         #Code Created#
+#################################################################
+    colors = list(dict.fromkeys(ar))
+    num_of_colors = len(colors)
+    num_of_sock_pairs = 0
+    
+    for i in range(num_of_colors):
+        color_x_occurence = ar.count(colors[i])
+        if color_x_occurence % 2 == 0:
+            num_of_pairs =  color_x_occurence/2
+        if color_x_occurence % 2 > 0:
+            num_of_pairs = (color_x_occurence - 1)/2
+        num_of_sock_pairs = num_of_sock_pairs + num_of_pairs
+           
+    return int(num_of_sock_pairs) 
+#################################################################        
+        
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = sockMerchant(n, ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
