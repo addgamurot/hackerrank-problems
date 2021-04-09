@@ -1,0 +1,9 @@
+# Complete the solve function below.
+def solve(s):
+    s_in_list = s.split(' ')
+    capiltalized_element = []
+    
+    for i in range(len(s_in_list)):
+        capiltalized_element.append(s_in_list[i].capitalize())
+        
+    return ' '.join(capiltalized_element)
