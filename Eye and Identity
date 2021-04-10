@@ -1,0 +1,5 @@
+import numpy
+numpy.set_printoptions(legacy='1.13')
+
+dimension = input().strip().split(' ')
+print(numpy.eye(int(dimension[0]), int(dimension[1]), k = 0))
