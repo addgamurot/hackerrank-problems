@@ -1,0 +1,25 @@
+import numpy
+
+dimension = tuple(list(map(int, input().strip().split(' '))))
+a = []
+b = []
+
+for _ in range(dimension[0]):
+    a.append(list(map(int, input().strip().split(' '))))
+   
+for _ in range(dimension[0]):
+    b.append(list(map(int, input().strip().split(' '))))
+
+total = numpy.array(numpy.add(a,b))
+diff = numpy.array(numpy.subtract(a,b))
+product = numpy.array(numpy.multiply(a,b))
+quotient = numpy.array(numpy.floor_divide(a,b))
+remainder = numpy.array(numpy.mod(a,b))
+power_product = numpy.array(numpy.power(a,b))
+
+print(total)
+print(diff)
+print(product)
+print(quotient)
+print(remainder)
+print(power_product)
