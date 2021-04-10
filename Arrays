@@ -1,0 +1,15 @@
+import numpy
+
+def arrays(arr):
+    # complete this function
+    # use numpy.array
+                  Code Created
+#################################################    
+    numpy_arr = numpy.array(arr, float)
+    flipped_numpy_arr = numpy.flip(numpy_arr)
+    return flipped_numpy_arr
+#################################################
+
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)
