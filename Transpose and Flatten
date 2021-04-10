@@ -1,0 +1,11 @@
+import numpy
+
+dimension = input().strip().split(' ')
+arr = []
+for i in range(int(dimension[0])):
+    row = numpy.array((input().strip().split(' ')), int)
+    arr.append(row)
+
+numpy_array = numpy.array(arr)
+print(numpy.transpose(numpy_array))
+print(numpy_array.flatten())
