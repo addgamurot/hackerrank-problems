@@ -1,0 +1,6 @@
+import numpy
+
+dimension = input().strip().split(' ')
+dimension_in_tuple = tuple(map(int,list(dimension)))
+print(numpy.zeros(dimension_in_tuple, int))
+print(numpy.ones(dimension_in_tuple, int))
