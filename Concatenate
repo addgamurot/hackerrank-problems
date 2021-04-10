@@ -1,0 +1,18 @@
+import numpy
+
+dimensions = input().strip().split(' ')
+
+array_1 = []
+array_2 = []
+
+# M loop
+for _ in range(int(dimensions[0])):
+    row = numpy.array((input().strip().split(' ')), int)
+    array_1.append(row)
+
+# N loop    
+for _ in range(int(dimensions[1])):
+    row = numpy.array((input().strip().split(' ')), int)
+    array_2.append(row)
+
+print(numpy.concatenate((numpy.array(array_1), numpy.array(array_2)), axis = 0))
