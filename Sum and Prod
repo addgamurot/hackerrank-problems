@@ -1,0 +1,12 @@
+import numpy
+
+
+dimension = tuple(map(int,input().strip().split(' ')))
+arr = []
+for i in range(dimension[0]):
+    input_rows = list(map(int,input().strip().split(' ')))
+    arr.append(input_rows)
+
+numpy_array = numpy.array(arr)
+numpy_array_sum = numpy.sum(numpy_array, axis = 0)
+print(numpy.prod(numpy_array_sum))
