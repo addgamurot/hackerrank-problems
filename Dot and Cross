@@ -1,0 +1,17 @@
+import numpy
+
+dimension = int(input())
+arr_a = []
+arr_b = []
+# loop A
+for _ in range(dimension):
+    input_row_a = list(map(int, input().strip().split(' ')))
+    arr_a.append(input_row_a)
+numpy_array_a = numpy.array(arr_a)
+# loop B
+for _ in range(dimension):
+    input_row_b = list(map(int, input().strip().split(' ')))
+    arr_b.append(input_row_b)
+numpy_array_a = numpy.array(arr_a)
+
+print(numpy.dot(arr_a, arr_b))
