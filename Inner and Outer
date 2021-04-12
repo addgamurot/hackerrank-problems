@@ -1,0 +1,7 @@
+import numpy
+
+row1_input = numpy.array(list(map(int, input().strip().split(' '))))
+row2_input = numpy.array(list(map(int, input().strip().split(' '))))
+
+print(numpy.inner(row1_input,row2_input))
+print(numpy.outer(row1_input,row2_input))
