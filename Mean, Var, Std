@@ -1,0 +1,16 @@
+import numpy
+
+
+dimension = tuple(map(int, input().strip().split(' ')))
+
+arr = []
+
+for i in range(dimension[0]):
+    input_row = list(map(int, input().strip().split(' ')))
+    arr.append(input_row)
+
+numpy_array = numpy.array(arr)
+
+print(numpy.mean(numpy_array, axis = 1))
+print(numpy.var(numpy_array, axis = 0))
+print(round(numpy.std(numpy_array), 11))
