@@ -1,0 +1,6 @@
+import numpy
+
+input_row = list(map(float,input().strip().split(' ')))
+x = int(input())
+numpy_row = numpy.array(input_row)
+print(numpy.polyval(numpy_row,x))
