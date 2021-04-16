@@ -1,0 +1,10 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    
+              
+ ############# Code Created #############
+    arr1 = list(dict.fromkeys(arr))
+    sorted_arr1 = sorted(arr1)
+    print(sorted_arr1[-2])
+ #######################################   
