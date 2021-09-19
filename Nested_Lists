@@ -1,0 +1,26 @@
+if __name__ == '__main__':
+    second_lowest_score_names = []
+    scores = []
+    records = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+    
+        record = [name,score]
+        records.append(record)
+        scores.append(score)
+       
+    sorted_scores = sorted(scores)
+    removed_duplicate_scores = list(dict.fromkeys(sorted_scores))
+    second_lowest_score = removed_duplicate_scores[1] # 37.21
+    
+    for i in records:
+        if i[1] == second_lowest_score:
+          second_lowest_score_names.append(i[0])  
+    sorted_final_names = sorted(second_lowest_score_names)
+    
+    for names in sorted_final_names:
+        print(names)
+    
+   
+
